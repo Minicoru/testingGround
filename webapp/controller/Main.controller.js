@@ -7,7 +7,9 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 
 			var url = '/sap/opu/odata/SAP/<service>/';
 
-			oModel = new sap.ui.model.odata.ODataModel();
+			oModel = new sap.ui.model.json.JSONModel();
+			oModel.setData([]);
+			// oModel = new sap.ui.model.odata.ODataModel();
 			// url, true
 
 			//* Create Items Aggregation for Table
