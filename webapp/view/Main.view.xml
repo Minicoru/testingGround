@@ -1,9 +1,34 @@
-<mvc:View controllerName="testing.testingGround.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="testing.testingGround.controller.Main"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content></content>
+					<content>
+						<Table id="idtable" growing="true" growingThreshold="50">
+							<columns>
+								<Column width="8em">
+									<Text text="Purchasing Doc." />
+								</Column>
+								<Column>
+									<Text text="Purchasing Doc. Category" width="6em"/>
+								</Column>
+								<Column>
+									<Text text="Purchasing Doc. Type" width="6em"/>
+								</Column>
+								<Column>
+									<Text text="Status" />
+								</Column>
+								<Column>
+									<Text text="Created on" />
+								</Column>
+								<Column>
+									<Text text="Created by" />
+								</Column>
+							</columns>
+						</Table>
+					</content>
 				</Page>
 			</pages>
 		</App>
