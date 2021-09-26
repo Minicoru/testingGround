@@ -57,7 +57,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		},
 		//
 
-		exportxls:
+		exportCSV:
 			sap.m.Table.prototype.exportData ||
 			function (oEvent) {
 				var oExport = new sap.ui.core.util.Export({

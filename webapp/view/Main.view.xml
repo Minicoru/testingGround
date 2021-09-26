@@ -5,6 +5,13 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
+					<footer>
+						<Bar design="sap.m.BarDesign.Footer">
+							<contentRight>
+								<Button icon="sap-icon://excel-attachment" press=".exportCSV" />
+							</contentRight>
+						</Bar>
+					</footer>
 					<content>
 						<Table id="idtable" growing="true" growingThreshold="50">
 							<columns>
