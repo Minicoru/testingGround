@@ -70,7 +70,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			// oModelOdata.attachRequestFailed(function onFailed(oEvent) {
 			// 	that._dialog.close();
 			// });
-			oModelOdata.read("/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value");
+			oModelOdata.read("/FilesSet(guid'0050569C-3779-1EDC-A3E9-2E983C4712A6')/$value");
 			// $.ajax({
 			// 	url: "/sap/opu/odata/SAP/ZE2E/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value",
 			// 	success: function (data) {
