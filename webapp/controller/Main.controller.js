@@ -55,6 +55,23 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 
 			this.getView().byId('idtable').setModel(oModel);
 		},
+
+		//
+
+		onAfterRendering: function () {
+			Controller.prototype.onAfterRendering.apply(this, arguments);
+			$.ajax({
+				url: '/sap/opu/odata/SAP/ZE2E/FilesSet(guid\'0050569C-33D0-1EEC-A083-2F3D8CFE5B76\')/$value',
+				dataType: 'binary',
+				success: function (data) {
+					console.log(data);
+				},
+				error: function (err) {
+					console.log(err);
+				}
+			});
+		}
+
 		//
 
 		exportCSV:
