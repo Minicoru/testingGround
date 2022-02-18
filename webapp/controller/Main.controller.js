@@ -61,7 +61,6 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		onAfterRendering: function () {
 			$.ajax({
 				url: "/sap/opu/odata/SAP/ZE2E/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value",
-				dataType: 'binary',
 				success: function (data) {
 					console.log(data);
 				},
