@@ -60,7 +60,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 
 		onAfterRendering: function () {
 			var oModelOdata = new sap.ui.model.odata.v2.ODataModel(
-				service ? service : '/sap/opu/odata/sap/ZE2E_SRV/FilesSet',
+				service ? service : '/sap/opu/odata/sap/ZE2E_SRV',
 				false
 			);
 
