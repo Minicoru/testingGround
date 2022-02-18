@@ -59,10 +59,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		//
 
 		onAfterRendering: function () {
-			var oModelOdata = new sap.ui.model.odata.v2.ODataModel(
-				service ? service : '/sap/opu/odata/sap/ZE2E_SRV',
-				false
-			);
+			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
 
 			// oModelOdata.attachRequestSent(function onSent(oEvent) {
 			// 	that._dialog.open();
@@ -73,7 +70,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			// oModelOdata.attachRequestFailed(function onFailed(oEvent) {
 			// 	that._dialog.close();
 			// });
-			oModelOdata.read('/FilesSet(guid\'0050569C-33D0-1EEC-A083-2F3D8CFE5B76\')/$value');
+			oModelOdata.read("/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value");
 			// $.ajax({
 			// 	url: "/sap/opu/odata/SAP/ZE2E/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value",
 			// 	success: function (data) {
