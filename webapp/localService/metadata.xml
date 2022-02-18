@@ -1,0 +1,294 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='GLTCLNT600_SFTK')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZE2E_SRV" xml:lang="es" sap:schema-version="1">
+			<EntityType Name="Meses" sap:content-version="1">
+				<Key><PropertyRef Name="mesClave"/></Key><Property Name="mesClave" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="mesNombre" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/></EntityType>
+			<EntityType Name="anio" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="FormSIM" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/></Key><Property Name="CantidadTanque" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Observation" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlacasArtefacto" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Formatotanque" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RecorridoPropuestoRed" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Capacidaddeltanque" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MaterialesAcopiReubicar" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AutonomiaRequerida" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Espacioparaubicarlacentral" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ServiciosAdicionales" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Verificarsirequierrejaybar" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cantidadreguladorprimera" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ContactoTerreno" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cantidadreguladorsegunda" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="InscritosSecExistentes" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cantidadreguladordobletapa" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="InscritosSecRequeridos" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EmpresaSaliente" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Isometricored" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distanciaaedificaciones" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distanciaafuentesdeignicion" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distanciaatendidoelectrico" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distanciaaamarasdealcantar" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Presenciadematerialescombu" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Placasvisiblesdeartefactos" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Terrenonoaptoparainstalaci" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Accesibilidadingresocamion" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distanciaalpuntodecarga" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Carácter 1"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ubicacionparalacentral" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Syuname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Syuzeit" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sydate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Files" m:HasStream="true" sap:content-version="1">
+				<Key><PropertyRef Name="AdjuntoId"/></Key><Property Name="AdjuntoId" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="ID único" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Syuname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="comm" sap:content-version="1">
+				<Key><PropertyRef Name="ClassPrx"/><PropertyRef Name="Content"/><PropertyRef Name="File"/><PropertyRef Name="Method"/><PropertyRef Name="Userid"/><PropertyRef Name="Item"/></Key><Property Name="ClassPrx" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Clase"/><Property Name="Content" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Datos"/><Property Name="File" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Archivo"/><Property Name="Method" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Metodo"/><Property Name="Userid" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Usuario"/><Property Name="Item" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="ITEM"/></EntityType>
+			<EntityType Name="TestPrueba" sap:content-version="1">
+				<Key><PropertyRef Name="test1"/></Key><Property Name="test1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Cotizaciones" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/></Key><Property Name="ClienteEsContacTecnicoMail" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ano" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="ANO"/><Property Name="EjecutivoComercial" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false"
+					sap:label="Campo carácter longitud 12" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Canal" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CANAL"/><Property Name="CanalTxt" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Centro" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="CENTRO"/><Property Name="CentroTxt" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Cliente2Nombre" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cliente2Telf1" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cliente2Telf2" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ClienteEmail" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CLIENTE_EMAIL" sap:filterable="false"/><Property Name="ClienteEsContacTecnico" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CLIENTE_ES_CONTAC_TECNICO"
+					sap:filterable="false"/><Property Name="ClienteNombre" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="CLIENTE_NOMBRE" sap:filterable="false"/><Property Name="ClienteRut" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="CLIENTE_RUT"/><Property Name="ClienteTelf1" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CLIENTE_TELF1" sap:filterable="false"/><Property Name="ClienteTelf2" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CLIENTE_TELF2" sap:filterable="false"/><Property Name="ClienteTipo" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="CLIENTE_TIPO" sap:filterable="false"/><Property Name="Contratista" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Campo carácter longitud 12"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="COTIZACION"/><Property Name="CubicacionCon" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Carácter 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CubicacionSin" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Carácter 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DiasGestion" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false"
+					sap:label="Ámbito no definido , posiblemente para niveles patch" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Dm" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="DM" sap:filterable="false"/><Property Name="EjecutivoComercialNombre" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="EnPlazo" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="EN_PLAZO" sap:filterable="false"/><Property Name="EnPlazoTxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Estatus" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="ESTATUS"/><Property Name="EstatusDescrip" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="EstatusDescrip" sap:filterable="false"/><Property Name="EstatusNew" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="EstatusTipo" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="EstatusTipo" sap:filterable="false"/><Property Name="FechaCreacion" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="FECHA_CREACION"/><Property Name="FechaFinalizacion" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Válido a" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="InfoAdicRequiereProyectoGa" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="INFO_ADIC_REQUIERE_PROYECTO_GA"
+					sap:filterable="false"/><Property Name="InfoAdicServCotizar" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="INFO_ADIC_SERV_COTIZAR"
+					sap:filterable="false"/><Property Name="InfoAdicTipoConst" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="INFO_ADIC_TIPO_CONST"
+					sap:filterable="false"/><Property Name="InfoAdicTipoObra" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="INFO_ADIC_TIPO_OBRA"
+					sap:filterable="false"/><Property Name="JefeZonal" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="JEFE_ZONAL" sap:filterable="false"/><Property Name="Latitud" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Longitud" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Mensaje" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="OtVisita" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Orden" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PuestoTrabajo" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Puesto trabajo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sim" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="SimContratista" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Campo de texto, longitud 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="SimIdpush" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="SimNombre" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TiempoTranscurrido" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TipoInstalacion" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="TIPO_INSTALACION" sap:filterable="false"/><Property Name="UbicCalle" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="UBIC_CALLE" sap:filterable="false"/><Property Name="UbicComuna" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="UbicInstrucciones" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="UBIC_INSTRUCCIONES"
+					sap:filterable="false"/><Property Name="UbicNumCalle" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="UBIC_NUM_CALLE" sap:filterable="false"/><Property Name="UbicNumTipoUbic" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="UBIC_NUM_TIPO_UBIC" sap:filterable="false"/><Property Name="UbicRegion" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="UBIC_REGION" sap:filterable="false"/><Property Name="UbicTipoUbic" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="UBIC_TIPO_UBIC" sap:filterable="false"/><Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="VisitaDia" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VisitaHora" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="equiposEspecialesFiles" Relationship="ZE2E_SRV.CotizacionToEquiposEspecialesFiles"
+					FromRole="FromRole_CotizacionToEquiposEspecialesFiles" ToRole="ToRole_CotizacionToEquiposEspecialesFiles"/><NavigationProperty Name="equiposEspeciales" Relationship="ZE2E_SRV.CotizacionToEquiposEspeciales"
+					FromRole="FromRole_CotizacionToEquiposEspeciales" ToRole="ToRole_CotizacionToEquiposEspeciales"/><NavigationProperty Name="adjuntos" Relationship="ZE2E_SRV.CotizacionToAdjuntos" FromRole="FromRole_CotizacionToAdjuntos"
+					ToRole="ToRole_CotizacionToAdjuntos"/><NavigationProperty Name="comentarios" Relationship="ZE2E_SRV.CotizacionToComentarios" FromRole="FromRole_CotizacionToComentarios"
+					ToRole="ToRole_CotizacionToComentarios"/><NavigationProperty Name="artefactos" Relationship="ZE2E_SRV.CotizacionToArtefactos" FromRole="FromRole_CotizacionToArtefactos"
+					ToRole="ToRole_CotizacionToArtefactos"/><NavigationProperty Name="FormSim" Relationship="ZE2E_SRV.CotizacionToFormSIM" FromRole="FromRole_CotizacionToFormSIM"
+					ToRole="ToRole_CotizacionToFormSIM"/></EntityType>
+			<EntityType Name="Artefactos" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/></Key><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Material" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Denominación" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cantidad" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Potencia" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Potencia" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Capacidad" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Capacidad" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TipoEquipo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tipo Equipo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Canal" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/></EntityType>
+			<EntityType Name="Comentarios" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/><PropertyRef Name="ComentarioId"/></Key><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false"/><Property Name="MotivoId" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Motivo ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="ComentarioId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Sydate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="Comentario" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Texto (200 c.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="Syuname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Syuzeit" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/></EntityType>
+			<EntityType Name="AdjuntosInfo" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/></Key><Property Name="AdjuntoId" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="ID único" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sydate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Syuzeit" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Car.20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Url" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="char255" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FlagCubicacion" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Carácter 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Comentario" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Texto (200 c.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Syuname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CampoFormulario" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 caracteres"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GraficoPlazo" sap:content-version="1">
+				<Key><PropertyRef Name="dimension"/></Key><Property Name="dimension" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="valor" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GraficoEstados" sap:content-version="1">
+				<Key><PropertyRef Name="dimension"/></Key><Property Name="dimension" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="valor" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="EquiposEspeciales" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/></Key><Property Name="Posnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Posición" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Solicitante" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Campo carácter longitud 12"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FechaSolicitud" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NombreEquipo" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Texto (200 c.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cantidad" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="UnidadMedida" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LugarEntrega" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FechaEstimadaEntrega" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PotenciaRequerida" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PresionTrabajo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MedidasAlto" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MedidasLargo" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MedidasAncho" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LocalidadInstalacion" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Texto (200 c.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AltGeoInstalacion" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TemperaturaTrabajo" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RedDiametroEntrada" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RedDiametroSalida" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="GarantiaRequerida" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ProveedorRecomendado" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PrecioUnitarioRef" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="PrecioMoneda"
+					sap:label="Valor neto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PrecioMoneda" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Comentario" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Texto (200 c.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="EquiposEspecialesFiles" m:HasStream="true" sap:content-version="1">
+				<Key><PropertyRef Name="Cotizacion"/><PropertyRef Name="Posnr"/><PropertyRef Name="AdjuntoId"/></Key><Property Name="Cotizacion" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Posnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Posición" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AdjuntoId" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="ID único" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Syuname" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sydate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Syuzeit" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="ZcdsF4PmCanalSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Val. inferior dom."/><Property Name="descripcion" Type="Edm.String" MaxLength="60" sap:label="Descrip.breve"/></EntityType>
+			<EntityType Name="ZcdsF4PmRegionesSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Región"/><Property Name="descripcion" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Región"/><Property Name="centro" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Centro"/></EntityType>
+			<EntityType Name="ZcdsF4PmServCotizarSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Servicio a Cotizar"/><Property Name="descripcion" Type="Edm.String" MaxLength="100" sap:label="Descripción"/></EntityType>
+			<EntityType Name="ZcdsF4PmTipoEquipoSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Val. inferior dom."/><Property Name="descripcion" Type="Edm.String" MaxLength="60" sap:label="Descrip.breve"/></EntityType>
+			<EntityType Name="ZcdsF4PmSimContratistaSetType" sap:content-version="1">
+				<Key><PropertyRef Name="usuario"/></Key><Property Name="usuario" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Usuario"/><Property Name="email" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Mail"/><Property Name="perfil" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Perfil"/><Property Name="activo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Activo"/></EntityType>
+			<EntityType Name="ZcdsF4PmTpClientetSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Tipo Cliente"/><Property Name="descripcion" Type="Edm.String" MaxLength="100" sap:label="Descripción"/></EntityType>
+			<EntityType Name="ZcdsF4PmTpConsttSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Tipo Construcción"/><Property Name="descripcion" Type="Edm.String" MaxLength="100" sap:label="Tipo Construcción"/></EntityType>
+			<EntityType Name="ZcdsF4PmTpObraSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Tipo de Obra"/><Property Name="descripcion" Type="Edm.String" MaxLength="100" sap:label="Descripción"/></EntityType>
+			<EntityType Name="ZcdsF4PmTpInstSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="descripcion" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Tipo Inst. Descrip"/><Property Name="canal1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Canal"/><Property Name="canal2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Canal"/><Property Name="canal3" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Canal"/><Property Name="canal4" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Canal"/><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="UpperCase" sap:label="TIPO_INSTALACION"/></EntityType>
+			<EntityType Name="ZcdsF4PmTpUbitSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Tipo Ubicación"/><Property Name="descripcion" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Tipo Ubicación Descr"/></EntityType>
+			<EntityType Name="ZcdsF4PmCentrosSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Centro"/><Property Name="descripcion" Type="Edm.String" MaxLength="30" sap:label="Nombre 1"/><Property Name="region" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Región"/></EntityType>
+			<EntityType Name="ZcdsF4PmCoEstadosSetType" sap:content-version="1">
+				<Key><PropertyRef Name="estatus"/></Key><Property Name="estatus" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Estado"/><Property Name="descripcion" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Descripción"/><Property Name="tipo" Type="Edm.String" MaxLength="20" sap:label="Tipo Estado"/><Property Name="evento" Type="Edm.String" MaxLength="200" sap:display-format="UpperCase" sap:label="Evento"/></EntityType>
+			<EntityType Name="ZcdsPmUsuarioPerfilSetType" sap:content-version="1">
+				<Key><PropertyRef Name="email"/></Key><Property Name="email" Type="Edm.String" Nullable="false" MaxLength="100" sap:display-format="UpperCase" sap:label="Mail"/><Property Name="usuario" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Usuario"/><Property Name="nombre" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Nombre Completo"/><Property Name="perfil" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Perfil"/><Property Name="activo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Activo"/><Property Name="idpush" Type="Edm.String" MaxLength="255" sap:display-format="UpperCase" sap:label="char255"/><Property Name="puestotrabajo" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Pto.tbjo.responsable"/></EntityType>
+			<EntityType Name="ZcdsF4PmComunasSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Comuna"/><Property Name="descripcion" Type="Edm.String" MaxLength="40" sap:label="Comuna"/><Property Name="centro" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Centro"/><Property Name="region" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Región"/></EntityType>
+			<EntityType Name="ZcdsF4PmMoComSetType" sap:content-version="1">
+				<Key><PropertyRef Name="clave"/></Key><Property Name="clave" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Motivo ID"/><Property Name="descripcion" Type="Edm.String" MaxLength="100" sap:label="Motivo"/></EntityType>
+			<EntityType Name="ZcdsF4PmJFtSetType" sap:content-version="1">
+				<Key><PropertyRef Name="centro"/></Key><Property Name="centro" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Centro"/><Property Name="residencial" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Residencial"/><Property Name="comercial" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Comercial"/><Property Name="medidor" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Medidor"/><Property Name="industrial" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Industrial"/></EntityType>
+			<Association Name="CotizacionToArtefactos" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToArtefactos"/><End Type="ZE2E_SRV.Artefactos" Multiplicity="*" Role="ToRole_CotizacionToArtefactos"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToArtefactos"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToArtefactos"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CotizacionToComentarios" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToComentarios"/><End Type="ZE2E_SRV.Comentarios" Multiplicity="*" Role="ToRole_CotizacionToComentarios"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToComentarios"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToComentarios"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CotizacionToAdjuntos" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToAdjuntos"/><End Type="ZE2E_SRV.AdjuntosInfo" Multiplicity="*" Role="ToRole_CotizacionToAdjuntos"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToAdjuntos"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToAdjuntos"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CotizacionToEquiposEspeciales" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToEquiposEspeciales"/><End Type="ZE2E_SRV.EquiposEspeciales" Multiplicity="*" Role="ToRole_CotizacionToEquiposEspeciales"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToEquiposEspeciales"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToEquiposEspeciales"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CotizacionToEquiposEspecialesFiles" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToEquiposEspecialesFiles"/><End Type="ZE2E_SRV.EquiposEspecialesFiles" Multiplicity="*" Role="ToRole_CotizacionToEquiposEspecialesFiles"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToEquiposEspecialesFiles"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToEquiposEspecialesFiles"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CotizacionToFormSIM" sap:content-version="1"><End Type="ZE2E_SRV.Cotizaciones" Multiplicity="1" Role="FromRole_CotizacionToFormSIM"/><End Type="ZE2E_SRV.FormSIM" Multiplicity="0..1" Role="ToRole_CotizacionToFormSIM"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CotizacionToFormSIM"><PropertyRef Name="Cotizacion"/></Principal>
+					<Dependent Role="ToRole_CotizacionToFormSIM"><PropertyRef Name="Cotizacion"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZE2E_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ZcdsF4PmCanalSet" EntityType="ZE2E_SRV.ZcdsF4PmCanalSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmRegionesSet" EntityType="ZE2E_SRV.ZcdsF4PmRegionesSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmServCotizarSet" EntityType="ZE2E_SRV.ZcdsF4PmServCotizarSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTipoEquipoSet" EntityType="ZE2E_SRV.ZcdsF4PmTipoEquipoSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmSimContratistaSet" EntityType="ZE2E_SRV.ZcdsF4PmSimContratistaSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTpClientetSet" EntityType="ZE2E_SRV.ZcdsF4PmTpClientetSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTpConsttSet" EntityType="ZE2E_SRV.ZcdsF4PmTpConsttSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTpObraSet" EntityType="ZE2E_SRV.ZcdsF4PmTpObraSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTpInstSet" EntityType="ZE2E_SRV.ZcdsF4PmTpInstSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmTpUbitSet" EntityType="ZE2E_SRV.ZcdsF4PmTpUbitSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmCentrosSet" EntityType="ZE2E_SRV.ZcdsF4PmCentrosSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmCoEstadosSet" EntityType="ZE2E_SRV.ZcdsF4PmCoEstadosSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsPmUsuarioPerfilSet" EntityType="ZE2E_SRV.ZcdsPmUsuarioPerfilSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmComunasSet" EntityType="ZE2E_SRV.ZcdsF4PmComunasSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmMoComSet" EntityType="ZE2E_SRV.ZcdsF4PmMoComSetType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZcdsF4PmJFtSet" EntityType="ZE2E_SRV.ZcdsF4PmJFtSetType" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:content-version="1"/><EntitySet Name="MesesSet" EntityType="ZE2E_SRV.Meses" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="anioSet" EntityType="ZE2E_SRV.anio" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false"
+				sap:addressable="false" sap:content-version="1"/><EntitySet Name="FormSIMSet" EntityType="ZE2E_SRV.FormSIM" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="FilesSet" EntityType="ZE2E_SRV.Files" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="commSet" EntityType="ZE2E_SRV.comm" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false"
+				sap:content-version="1"/><EntitySet Name="TestPruebaSet" EntityType="ZE2E_SRV.TestPrueba" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="CotizacionesSet" EntityType="ZE2E_SRV.Cotizaciones" sap:searchable="true" sap:requires-filter="true"
+				sap:content-version="1"/><EntitySet Name="ArtefactosSet" EntityType="ZE2E_SRV.Artefactos" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="ComentariosSet" EntityType="ZE2E_SRV.Comentarios" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="AdjuntosInfoSet" EntityType="ZE2E_SRV.AdjuntosInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="GraficoPlazoSet" EntityType="ZE2E_SRV.GraficoPlazo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="GraficoEstadosSet" EntityType="ZE2E_SRV.GraficoEstados" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="EquiposEspecialesSet" EntityType="ZE2E_SRV.EquiposEspeciales" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="EquiposEspecialesFilesSet" EntityType="ZE2E_SRV.EquiposEspecialesFiles" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="CotizacionToEquiposEspecialesFilesSet" Association="ZE2E_SRV.CotizacionToEquiposEspecialesFiles" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToEquiposEspecialesFiles"/><End EntitySet="EquiposEspecialesFilesSet" Role="ToRole_CotizacionToEquiposEspecialesFiles"/></AssociationSet>
+				<AssociationSet Name="CotizacionToAdjuntosSet" Association="ZE2E_SRV.CotizacionToAdjuntos" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToAdjuntos"/><End EntitySet="AdjuntosInfoSet" Role="ToRole_CotizacionToAdjuntos"/></AssociationSet>
+				<AssociationSet Name="CotizacionToFormSIMSet" Association="ZE2E_SRV.CotizacionToFormSIM" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToFormSIM"/><End EntitySet="FormSIMSet" Role="ToRole_CotizacionToFormSIM"/></AssociationSet>
+				<AssociationSet Name="CotizacionToEquiposEspecialesSet" Association="ZE2E_SRV.CotizacionToEquiposEspeciales" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToEquiposEspeciales"/><End EntitySet="EquiposEspecialesSet" Role="ToRole_CotizacionToEquiposEspeciales"/></AssociationSet>
+				<AssociationSet Name="CotizacionToArtefactosSet" Association="ZE2E_SRV.CotizacionToArtefactos" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToArtefactos"/><End EntitySet="ArtefactosSet" Role="ToRole_CotizacionToArtefactos"/></AssociationSet>
+				<AssociationSet Name="CotizacionToComentariosSet" Association="ZE2E_SRV.CotizacionToComentarios" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="CotizacionesSet" Role="FromRole_CotizacionToComentarios"/><End EntitySet="ComentariosSet" Role="ToRole_CotizacionToComentarios"/></AssociationSet>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZE2E_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZE2E_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
