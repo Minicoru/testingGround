@@ -9,7 +9,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 
 			var oModel = new sap.ui.model.json.JSONModel();
 			// oModel.setData([]);
-			oModel.setData({ uid: '' });
+			oModel.setData({ uid: '', json: '' });
 			// oModel = new sap.ui.model.odata.ODataModel();
 			// url, true
 
@@ -87,11 +87,13 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
 			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76'}')/$value`);
 
-			var data =
-				"{ \n    ClassPrx: 'ZCL_E2E_SOL_COT', \n 	Content: 'guid\\'" + uid
-					? uid
-					: '0050569C-33D0-1EEC-A083-2F3D8CFE5B76' +
-					  "\\'', \n    Method: '', \n    Userid: '', \n    File: ''\n}";
+			var data = JSON.stringify({
+				ClassPrx: 'ZCL_E2E_SOL_COT',
+				Content: "guid'" + uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76' + "'",
+				Method: '',
+				Userid: '',
+				File: ''
+			});
 
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
