@@ -89,13 +89,11 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 
 			var data = {
 				ClassPrx: 'ZCL_E2E_SOL_COT',
-				Content: "\'" + uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76' + "\'",
+				Content: `guid'${uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76'}'`,
 				Method: '',
 				Userid: '',
 				File: ''
 			};
-
-			data.Content = 'guid' + data.Content;
 
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
