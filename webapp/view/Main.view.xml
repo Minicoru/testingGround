@@ -9,25 +9,14 @@
 						<Bar design="sap.m.BarDesign.Footer">
 							<contentRight>
 								<!-- <Button icon="sap-icon://excel-attachment" press=".exportCSV" /> -->
-								<Button icon="sap-icon://excel-attachment" press=".getFile" />
+								<Button icon="sap-icon://download-from-cloud" press=".getFile" />
 							</contentRight>
 						</Bar>
 					</footer>
 					<content>
-					<TextArea
-						cols="50"
-						growing="false"
-						growingMaxLines="0"
-						height="100%"
-						maxLength="0"
-						rows="50"
-						showExceededText="true"
-						valueLiveUpdate="false"
-						wrapping="true"
-						value="{/uid}"
-					>
-						
-					</TextArea>
+						<TextArea cols="50" growing="false" growingMaxLines="0" height="100%" maxLength="0" rows="50" showExceededText="true" valueLiveUpdate="false" wrapping="true" value="{/uid}">
+
+						</TextArea>
 						<!-- <Table id="idtable" growing="true" growingThreshold="50">
 							<columns>
 								<Column width="8em">
