@@ -102,7 +102,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 				}
 			});
 
-			xhr.open('POST', '%7B%7BE2E%7D%7D/E2EPRX/mobile/');
+			xhr.open('POST', 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/');
 			xhr.setRequestHeader('Method', 'getFile');
 			xhr.setRequestHeader('Content-Type', 'application/json');
 
