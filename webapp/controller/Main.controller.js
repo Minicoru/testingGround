@@ -107,7 +107,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			xhr.open('POST', 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/');
 			xhr.setRequestHeader('Method', 'getFile');
 			xhr.setRequestHeader('Content-Type', 'application/json');
-			xhr.setRequestHeader('origin', 'null');
+			xhr.setRequestHeader('origin', window.location.href);
 			// headers: {
 			// 	sfa: 'true',
 			// 	usuario: 'fioribodega',
