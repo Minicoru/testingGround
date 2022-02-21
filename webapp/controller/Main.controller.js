@@ -107,6 +107,16 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			xhr.open('POST', 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/');
 			xhr.setRequestHeader('Method', 'getFile');
 			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.setRequestHeader('origin', 'null');
+			// headers: {
+			// 	sfa: 'true',
+			// 	usuario: 'fioribodega',
+			// 	clave: 'acceso_2018',
+			// 	ws: 'getResumenCRP',
+			// 	'Content-Type': 'application/json; charset=utf-8',
+			// 	'X-Requested-With': 'XMLHttpRequest',
+			// 	origin: 'null'
+			// },
 
 			xhr.send(JSON.stringify(data));
 		}
