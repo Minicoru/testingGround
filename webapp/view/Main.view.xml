@@ -15,7 +15,7 @@
 					</footer>
 					<content>
 					<TextArea
-						cols="20"
+						cols="50"
 						growing="false"
 						growingMaxLines="0"
 						height="100%"

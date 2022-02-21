@@ -85,7 +85,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		getFile: function (oEvt) {
 			var uid = this.getView().getModel().getProperty('/uid');
 			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
-			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-3779-1EDC-A3E9-2E983C4712A6'}')/$value`);
+			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76'}')/$value`);
 		}
 
 		//
