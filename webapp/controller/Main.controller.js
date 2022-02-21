@@ -87,13 +87,15 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
 			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76'}')/$value`);
 
-			var data = JSON.stringify({
+			var data = {
 				ClassPrx: 'ZCL_E2E_SOL_COT',
-				Content: "guid'" + uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76' + "'",
+				Content: "'" + uid ? uid : '0050569C-33D0-1EEC-A083-2F3D8CFE5B76' + "'",
 				Method: '',
 				Userid: '',
 				File: ''
-			});
+			};
+
+			data.Content = 'guid' + data.Content;
 
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
@@ -108,7 +110,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			xhr.setRequestHeader('Method', 'getFile');
 			xhr.setRequestHeader('Content-Type', 'application/json');
 
-			xhr.send(data);
+			xhr.send(JSON.stringify(data));
 		}
 
 		//
