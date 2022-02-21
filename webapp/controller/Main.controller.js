@@ -5,66 +5,63 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		onInit: function () {
 			//* Create ODATA model
 
-			var url = '/sap/opu/odata/SAP/<service>/';
+			var url = '/sap/opu/odata/SAP/ZE2E_SRV';
 
 			var oModel = new sap.ui.model.json.JSONModel();
-			oModel.setData([]);
+			// oModel.setData([]);
+			oModel.setData({ uid: '' });
 			// oModel = new sap.ui.model.odata.ODataModel();
 			// url, true
 
 			//* Create Items Aggregation for Table
 
-			this.getView()
-				.byId('idtable')
-				.bindAggregation(
-					'items',
-					'/<EntitySet>',
+			// this.getView()
+			// 	.byId('idtable')
+			// 	.bindAggregation(
+			// 		'items',
+			// 		'/<EntitySet>',
 
-					new sap.m.ColumnListItem({
-						cells: [
-							new sap.m.Text({
-								text: '{Ebeln}'
-							}),
+			// 		new sap.m.ColumnListItem({
+			// 			cells: [
+			// 				new sap.m.Text({
+			// 					text: '{Ebeln}'
+			// 				}),
 
-							new sap.m.Text({
-								text: '{Bstyp}'
-							}),
+			// 				new sap.m.Text({
+			// 					text: '{Bstyp}'
+			// 				}),
 
-							new sap.m.Text({
-								text: '{Bsart}'
-							}),
+			// 				new sap.m.Text({
+			// 					text: '{Bsart}'
+			// 				}),
 
-							new sap.m.Text({
-								text: '{Statu}'
-							}),
+			// 				new sap.m.Text({
+			// 					text: '{Statu}'
+			// 				}),
 
-							new sap.m.Text({
-								text: '{Aedat}'
-							}),
+			// 				new sap.m.Text({
+			// 					text: '{Aedat}'
+			// 				}),
 
-							new sap.m.Text({
-								text: '{Ernam}'
-							})
-						]
-					})
-				);
+			// 				new sap.m.Text({
+			// 					text: '{Ernam}'
+			// 				})
+			// 			]
+			// 		})
+			// 	);
 
 			//* Set ODATA Model to Table
 
 			this.getView().setModel(oModel);
 
-			this.getView().byId('idtable').setModel(oModel);
+			// this.getView().byId('idtable').setModel(oModel);
 		},
 
 		//
 
 		onAfterRendering: function () {
-			var oModelJson = new sap.ui.model.json.JSONModel();
-			oModelJson.setData({ text: '' });
 			// this.setModel(oModelOdata);
-			this.getView().setModel(oModelJson);
 			// oModelOdata.read("/FilesSet(guid'0050569C-3779-1EDC-A3E9-2E983C4712A6')/$value");
-
 			// oModelOdata.attachRequestSent(function onSent(oEvent) {
 			// 	that._dialog.open();
 			// });
@@ -86,79 +83,79 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		},
 
 		getFile: function (oEvt) {
-			var uid = this.getView().getModel().getProperty('/text');
+			var uid = this.getView().getModel().getProperty('/uid');
 			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
 			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-3779-1EDC-A3E9-2E983C4712A6'}')/$value`);
-		},
+		}
 
 		//
 
-		exportCSV:
-			sap.m.Table.prototype.exportData ||
-			function (oEvent) {
-				var oExport = new sap.ui.core.util.Export({
-					exportType: new sap.ui.core.util.ExportTypeCSV({
-						separatorChar: ';'
-					}),
+		// exportCSV:
+		// 	sap.m.Table.prototype.exportData ||
+		// 	function (oEvent) {
+		// 		var oExport = new sap.ui.core.util.Export({
+		// 			exportType: new sap.ui.core.util.ExportTypeCSV({
+		// 				separatorChar: ';'
+		// 			}),
 
-					models: this.getView().getModel(),
+		// 			models: this.getView().getModel(),
 
-					rows: {
-						path: '/<EntitySet>'
-					},
+		// 			rows: {
+		// 				path: '/<EntitySet>'
+		// 			},
 
-					columns: [
-						{
-							name: 'Purchasing Doc.',
+		// 			columns: [
+		// 				{
+		// 					name: 'Purchasing Doc.',
 
-							template: {
-								content: '{Ebeln}'
-							}
-						},
-						{
-							name: 'Purchasing Doc. Category',
+		// 					template: {
+		// 						content: '{Ebeln}'
+		// 					}
+		// 				},
+		// 				{
+		// 					name: 'Purchasing Doc. Category',
 
-							template: {
-								content: '{Bstyp}'
-							}
-						},
-						{
-							name: 'Purchasing Doc. Type',
+		// 					template: {
+		// 						content: '{Bstyp}'
+		// 					}
+		// 				},
+		// 				{
+		// 					name: 'Purchasing Doc. Type',
 
-							template: {
-								content: '{Bsart}'
-							}
-						},
-						{
-							name: 'Status',
+		// 					template: {
+		// 						content: '{Bsart}'
+		// 					}
+		// 				},
+		// 				{
+		// 					name: 'Status',
 
-							template: {
-								content: '{Statu}'
-							}
-						},
-						{
-							name: 'Created on',
+		// 					template: {
+		// 						content: '{Statu}'
+		// 					}
+		// 				},
+		// 				{
+		// 					name: 'Created on',
 
-							template: {
-								content: '{Aedat}'
-							}
-						},
-						{
-							name: 'Created by',
+		// 					template: {
+		// 						content: '{Aedat}'
+		// 					}
+		// 				},
+		// 				{
+		// 					name: 'Created by',
 
-							template: {
-								content: '{Ernam}'
-							}
-						}
-					]
-				});
+		// 					template: {
+		// 						content: '{Ernam}'
+		// 					}
+		// 				}
+		// 			]
+		// 		});
 
-				//* download exported file
+		// 		//* download exported file
 
-				oExport.saveFile().always(function () {
-					this.destroy();
-				});
-			}
+		// 		oExport.saveFile().always(function () {
+		// 			this.destroy();
+		// 		});
+		// 	}
 
 		//
 	});
