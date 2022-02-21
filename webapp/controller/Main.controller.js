@@ -59,7 +59,11 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 		//
 
 		onAfterRendering: function () {
-			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
+			var oModelJson = new sap.ui.model.json.JSONModel();
+			oModelJson.setData({ text: '' });
+			// this.setModel(oModelOdata);
+			this.getView().setModel(oModelJson);
+			// oModelOdata.read("/FilesSet(guid'0050569C-3779-1EDC-A3E9-2E983C4712A6')/$value");
 
 			// oModelOdata.attachRequestSent(function onSent(oEvent) {
 			// 	that._dialog.open();
@@ -70,7 +74,6 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			// oModelOdata.attachRequestFailed(function onFailed(oEvent) {
 			// 	that._dialog.close();
 			// });
-			oModelOdata.read("/FilesSet(guid'0050569C-3779-1EDC-A3E9-2E983C4712A6')/$value");
 			// $.ajax({
 			// 	url: "/sap/opu/odata/SAP/ZE2E/FilesSet(guid'0050569C-33D0-1EEC-A083-2F3D8CFE5B76')/$value",
 			// 	success: function (data) {
@@ -80,6 +83,12 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 			// 		console.log(err);
 			// 	}
 			// });
+		},
+
+		getFile: function (oEvt) {
+			var uid = this.getView().getModel().getProperty('/text');
+			var oModelOdata = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/ZE2E_SRV', false);
+			oModelOdata.read(`/FilesSet(guid'${uid ? uid : '0050569C-3779-1EDC-A3E9-2E983C4712A6'}')/$value`);
 		},
 
 		//

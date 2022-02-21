@@ -8,12 +8,27 @@
 					<footer>
 						<Bar design="sap.m.BarDesign.Footer">
 							<contentRight>
-								<Button icon="sap-icon://excel-attachment" press=".exportCSV" />
+								<!-- <Button icon="sap-icon://excel-attachment" press=".exportCSV" /> -->
+								<Button icon="sap-icon://excel-attachment" press=".getFile" />
 							</contentRight>
 						</Bar>
 					</footer>
 					<content>
-						<Table id="idtable" growing="true" growingThreshold="50">
+					<TextArea
+						cols="20"
+						growing="false"
+						growingMaxLines="0"
+						height="100%"
+						maxLength="0"
+						rows="50"
+						showExceededText="true"
+						valueLiveUpdate="false"
+						wrapping="true"
+						value="{/uid}"
+					>
+						
+					</TextArea>
+						<!-- <Table id="idtable" growing="true" growingThreshold="50">
 							<columns>
 								<Column width="8em">
 									<Text text="Purchasing Doc." />
@@ -34,7 +49,7 @@
 									<Text text="Created by" />
 								</Column>
 							</columns>
-						</Table>
+						</Table> -->
 					</content>
 				</Page>
 			</pages>
