@@ -95,30 +95,45 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function (Controller) {
 				File: ''
 			};
 
-			var xhr = new XMLHttpRequest();
-			xhr.withCredentials = true;
+			// var xhr = new XMLHttpRequest();
+			// xhr.withCredentials = true;
 
-			xhr.addEventListener('readystatechange', function () {
-				if (this.readyState === 4) {
-					console.log(this.responseText);
-				}
+			// xhr.addEventListener('readystatechange', function () {
+			// 	if (this.readyState === 4) {
+			// 		console.log(this.responseText);
+			// 	}
+			// });
+
+			// xhr.open('POST', 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/');
+			// xhr.setRequestHeader('Method', 'getFile');
+			// xhr.setRequestHeader('Content-Type', 'application/json');
+			// xhr.setRequestHeader('origin', window.location.href);
+			// // headers: {
+			// // 	sfa: 'true',
+			// // 	usuario: 'fioribodega',
+			// // 	clave: 'acceso_2018',
+			// // 	ws: 'getResumenCRP',
+			// // 	'Content-Type': 'application/json; charset=utf-8',
+			// // 	'X-Requested-With': 'XMLHttpRequest',
+			// // 	origin: 'null'
+			// // },
+
+			// xhr.send(JSON.stringify(data));
+
+			var settings = {
+				url: 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/',
+				method: 'POST',
+				timeout: 0,
+				headers: {
+					Method: 'getFile',
+					'Content-Type': 'application/json'
+				},
+				data: JSON.stringify(data)
+			};
+
+			$.ajax(settings).done(function (response) {
+				console.log(response);
 			});
-
-			xhr.open('POST', 'https://e2eprxhd428f378.us3.hana.ondemand.com/E2EPRX/mobile/');
-			xhr.setRequestHeader('Method', 'getFile');
-			xhr.setRequestHeader('Content-Type', 'application/json');
-			xhr.setRequestHeader('origin', window.location.href);
-			// headers: {
-			// 	sfa: 'true',
-			// 	usuario: 'fioribodega',
-			// 	clave: 'acceso_2018',
-			// 	ws: 'getResumenCRP',
-			// 	'Content-Type': 'application/json; charset=utf-8',
-			// 	'X-Requested-With': 'XMLHttpRequest',
-			// 	origin: 'null'
-			// },
-
-			xhr.send(JSON.stringify(data));
 		}
 
 		//
